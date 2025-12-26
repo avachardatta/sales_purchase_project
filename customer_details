@@ -1,0 +1,31 @@
+
+
+CREATE TABLE custoemr_details
+(
+	cust_add_code NUMERIC NOT NULL,
+	cust_code VARCHAR(50) NOT NULL,
+	cust_name VARCHAR(100) NOT NULL,
+	cust_address VARCHAR(100) NOT NULL,
+	cust_city VARCHAR(50) NOT NULL,
+	cust_pincode NUMERIC NOT NULL,
+	cust_state VARCHAR(50) NOT NULL,
+	cust_country VARCHAR(20) NOT NULL,
+	cust_mobile_no NUMERIC NOT NULL,
+	cust_email VARCHAR(50) NOT NULL ,
+	cust_acc_handleby NUMERIC NOT NULL
+);
+
+select * from customer_details
+
+
+SELECT * FROM customer_details WHERE cust_add_code = 1;
+
+INSERT INTO custoemr_details
+(
+    cust_add_code,cust_code,cust_name,cust_address,cust_city,cust_pincode,cust_state,cust_country,cust_mobile_no,cust_email,cust_acc_handleby
+)
+VALUES
+(
+    1,'AA001','Quantum Innovations','Shop no 3, Shreyas, 1st floor, 180 Madam Cama Road, Opposite Air India Building, Nariman Point','Mumbai',
+    400020,'Maharashtra','India',8541296321,'quantuminnovations@gmail.com',1001
+);
