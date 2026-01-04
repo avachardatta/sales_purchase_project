@@ -1,0 +1,7 @@
+-- F. Window Functions (31–33)
+
+-- Rank customers based on total sales amount.
+
+-- Find the top 2 highest orders per customer.
+
+-- Show running total of payments ordered by payment date.
