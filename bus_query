@@ -1,0 +1,43 @@
+-- . Real Business Scenarios (34–35)
+
+-- Find pending payment amount for each customer (order amount − paid amount).
+
+
+	SELECT * FROM order_details;
+
+	SELECT * FROM payment_details;
+
+	SELECT
+		o.od_cust_code,
+		COALESCE(SUM(o.od_sale_amt),0) - COALESCE(SUM(p.pd_order_amt),0) AS Bal_payment
+	FROM order_details o
+	JOIN payment_details p 
+		ON o.od_cust_code = p.pd_cust_code 
+	GROUP BY
+		o.od_cust_code;
+	
+
+
+-- Identify customers who ordered but never completed payment
+
+
+-- SELECT * FROM order_details;
+
+-- SELECT * FROM payment_details;
+
+
+	
+	SELECT
+		DISTINCT od_cust_code
+	FROM order_details	
+	WHERE 
+		 NOT EXISTS
+		(SELECT
+				pd_cust_code
+			FROM payment_details 
+			WHERE 
+				pd_cust_code = od_cust_code
+		);
+
+
+
