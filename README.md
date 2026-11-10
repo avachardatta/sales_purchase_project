@@ -41,7 +41,7 @@ Primary and foreign keys link the tables (see `automation/normalisation_steps.sq
 
 1. **Define:** listed the business questions above.
 2. **Collect:** designed the tables and loaded sample data for 2018 (5 items, 10 purchase orders, 10 salespeople).
-3. **Clean and model:** added primary and foreign keys, removed a duplicated column (customer name in orders), fixed date formats.
+3. **Clean and model:** added primary and foreign keys and removed a duplicated column (customer name in orders).
 4. **Explore:** basic SELECT / WHERE checks per table.
 5. **Analyze:** JOINs, GROUP BY / HAVING, subqueries, NOT EXISTS, window functions (RANK, ROW_NUMBER, running totals), GROUPING SETS.
 6. **Automate:** stored procedures and functions for daily operations (below).
