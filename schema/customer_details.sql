@@ -1,6 +1,6 @@
 
 
-CREATE TABLE custoemr_details
+CREATE TABLE customer_details
 (
 	cust_add_code NUMERIC NOT NULL,
 	cust_code VARCHAR(50) NOT NULL,
@@ -20,7 +20,7 @@ select * from customer_details
 
 SELECT * FROM customer_details WHERE cust_add_code = 1;
 
-INSERT INTO custoemr_details
+INSERT INTO customer_details
 (
     cust_add_code,cust_code,cust_name,cust_address,cust_city,cust_pincode,cust_state,cust_country,cust_mobile_no,cust_email,cust_acc_handleby
 )
